@@ -1,0 +1,19 @@
+name: continuous integration of python
+
+on:
+   pull_request:
+     branches: ["main"]
+   push:
+     branches: ["main"]
+
+permission : read
+jobs:
+  build:
+    runs-on: ubuntu-latest 
+    steps:
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+
